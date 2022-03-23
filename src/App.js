@@ -21,11 +21,13 @@ export default function App() {
     <>
       <div style={{ minHeight: '100vh' }}>
         <Navbar title="TextAl" toggleMode={toggleMode} mode={mode} />
+  <div className="container">
         <Routes>
           <Route path="/" element={<FormComp />} />
           <Route path="/about" element={<About />} />
           <Route path="/*" element={<Error404 />} />
         </Routes>
+  </div>
       </div>
     </>
   );
