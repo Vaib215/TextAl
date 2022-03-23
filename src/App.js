@@ -24,7 +24,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<FormComp />} />
           <Route path="/about" element={<About />} />
-          <Route path="/*" element={<Error404/>} />
+          <Route path="/*" element={<Error404 />} />
         </Routes>
       </div>
     </>
