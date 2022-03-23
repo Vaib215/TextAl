@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Navbar from './Components/Navbar';
 import FormComp from './Components/FormComp';
 import About from './Components/About';
-
-function App() {
+import Error404 from './Components/Error404';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+export default function App() {
   const [mode, setMode] = useState('light');
-  const [comp, setComp] = useState(<FormComp mode={mode} />);
   const toggleMode = () => {
     if (mode === 'light') {
       setMode('dark');
@@ -16,30 +16,17 @@ function App() {
   document.querySelector('body').classList = `bg-${
     mode === 'light' ? 'dark' : 'light'
   } text-${mode}`;
-  const setAbout = () => {
-    setComp(<About mode={mode} />);
-    document.querySelector('.home').classList.remove('active');
-    document.querySelector('.about').classList.add('active');
-  };
-  const setHome = () => {
-    setComp(<FormComp mode={mode} />);
-    document.querySelector('.about').classList.remove('active');
-    document.querySelector('.home').classList.add('active');
-  };
+
   return (
     <>
       <div style={{ minHeight: '100vh' }}>
-        <Navbar
-          title="TextAl"
-          setAbout={setAbout}
-          setHome={setHome}
-          toggleMode={toggleMode}
-          mode={mode}
-        />
-        <div className="container my-4 py-4">{comp}</div>
+        <Navbar title="TextAl" toggleMode={toggleMode} mode={mode} />
+        <Routes>
+          <Route path="/" element={<FormComp />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/*" element={<Error404/>} />
+        </Routes>
       </div>
     </>
   );
 }
-
-export default App;

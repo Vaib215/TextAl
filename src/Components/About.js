@@ -1,16 +1,16 @@
 import React from 'react';
 
-export default function About(props) {
+export default function About() {
   return (
-    <div class={`about-section`}>
-      <div class="container col col-md-8 mx-auto">
-        <div class="row">
-          <div class="about-title clearfix">
+    <div className={`about-section`}>
+      <div className="container col col-md-8 mx-auto">
+        <div className="row">
+          <div className="about-title clearfix">
             <h1>
               About <span>Appmom</span>
             </h1>
             <h3>Lorem ipsum dolor sit amet </h3>
-            <p class="about-paddingB">
+            <p className="about-paddingB">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               aliquet dolor libero, eget venenatis mauris finibus dictum.
               Vestibulum quis elit eget neque porttitor congue non sit amet
@@ -21,7 +21,7 @@ export default function About(props) {
               Suspendisse potenti. Nulla eros mauris, convallis et sem tempus,
               viverra hendrerit sapien
             </p>
-            <div class="about-icons">
+            <div className="about-icons">
               <ul style={{ display: 'flex', listStyle: 'none' }}>
                 <li>
                   <a href="https://www.facebook.com/">
@@ -50,8 +50,8 @@ export default function About(props) {
               </ul>
             </div>
           </div>
-          <div class="col-md-5 col-sm-6">
-            <div class="about-img">
+          <div className="col-md-5 col-sm-6">
+            <div className="about-img">
               <img
                 src="https://devitems.com/preview/appmom/img/mobile/2.png"
                 alt=""

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Buttons from './Buttons';
-export default function FormComp(props) {
+export default function FormComp() {
   const [prompt, setPrompt] = useState('');
   const sendPrompt = (t) => {
     setTimeout(() => {
@@ -27,11 +27,7 @@ export default function FormComp(props) {
             placeholder="Paste or type the text you want to alter here..."
             rows="8"
           ></textarea>
-          <Buttons
-            sendPrompt={sendPrompt}
-            text={text}
-            setText={setText}
-          />
+          <Buttons sendPrompt={sendPrompt} text={text} setText={setText} />
           <div id="mess" className="invisible">
             <div
               className="alert alert-success fade show py-1"
