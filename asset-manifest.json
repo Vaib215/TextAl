@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/TextAl/static/js/main.dcd9a057.js",
+    "main.js": "/TextAl/static/js/main.b856446c.js",
     "index.html": "/TextAl/index.html",
-    "main.dcd9a057.js.map": "/TextAl/static/js/main.dcd9a057.js.map"
+    "main.b856446c.js.map": "/TextAl/static/js/main.b856446c.js.map"
   },
   "entrypoints": [
-    "static/js/main.dcd9a057.js"
+    "static/js/main.b856446c.js"
   ]
 }
