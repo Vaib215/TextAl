@@ -15,19 +15,19 @@ export default function App() {
   };
   document.querySelector('body').classList = `bg-${
     mode === 'light' ? 'dark' : 'light'
-  } text-${mode}`;
+    } text-${mode}`;
 
   return (
     <>
       <div style={{ minHeight: '100vh' }}>
         <Navbar title="TextAl" toggleMode={toggleMode} mode={mode} />
-  <div className="container">
-        <Routes>
-          <Route path="/" element={<FormComp />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/*" element={<Error404 />} />
-        </Routes>
-  </div>
+        <div className="container">
+          <Routes>
+            <Route path="/TextAl" element={<FormComp />} />
+            <Route path="/TextAl/about" element={<About />} />
+            <Route path="/TextAl/*" element={<Error404 />} />
+          </Routes>
+        </div>
       </div>
     </>
   );

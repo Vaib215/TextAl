@@ -9,7 +9,7 @@ export default function Navbar(props) {
         } fixed`}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/TextAl">
             {props.title}
           </Link>
           <button
@@ -26,12 +26,12 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active home" to="/">
+                <Link className="nav-link home" to="/TextAl">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link about" to="about">
+                <Link className="nav-link about" to="/TextAl/about">
                   About
                 </Link>
               </li>

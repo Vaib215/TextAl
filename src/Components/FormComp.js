@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Buttons from './Buttons';
+import { element } from 'prop-types';
 export default function FormComp() {
   const [prompt, setPrompt] = useState('');
   const sendPrompt = (t) => {
@@ -13,6 +14,8 @@ export default function FormComp() {
   const handleChange = (e) => {
     setText(e.target.value);
   };
+  document.title = "TextAl | Home"
+
   const [text, setText] = useState('');
   return (
     <>
@@ -41,9 +44,9 @@ export default function FormComp() {
       <div className="container">
         <h3>About your text:</h3>
         <p>
-          Your text has {text.split(/[' ']+/).length} words and {text.length}{' '}
+          Your text has {text.split(/\s+/).filter(element => { return element.length !== 0 }).length} words and {text.split("").filter(element => element !== ' ').length + text.split(/\s+/).filter(element => { return element.length !== 0 }).length - (text.length === 0 ? 0 : 1)}{' '}
           characters.
-          <br /> Average reading time: {0.008 * text.split(' ').length} minutes
+          <br /> Average reading time: {0.008 * text.split(/\s+/).filter(element => { return element.length !== 0 }).length} minutes
         </p>
         <h6>Text Preview:</h6>
         <p>

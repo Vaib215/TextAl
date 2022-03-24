@@ -37,30 +37,30 @@ export default function Buttons(props) {
   };
 
   return (
-    <div>
-      <button className={`btn btn-light btn-outline-dark my-2`} onClick={handleUpClick}>
+    <div className="d-flex flex-wrap" style={{justifyContent:"center"}}>
+      <button disabled={props.text.length===0} className={`btn btn-light btn-outline-dark my-2`} onClick={handleUpClick}>
         Convert to UPPERCASE
       </button>
-      <button
-        className={`btn btn-light btn-outline-dark my-2 mx-2`}
+      <button disabled={props.text.length===0}
+        className={`btn btn-light btn-outline-dark my-2 mx-auto`}
         onClick={handleLoClick}
       >
         Convert to lowercase
       </button>
-      <button className={`btn btn-light btn-outline-dark my-2`} onClick={handleCcClick}>
+      <button disabled={props.text.length===0} className={`btn btn-light btn-outline-dark my-2 mx-auto`} onClick={handleCcClick}>
         Convert To Capitalize Case
       </button>
-      <button
-        className={`btn btn-light btn-outline-dark my-2 mx-2`}
+      <button disabled={props.text.length===0}
+        className={`btn btn-light btn-outline-dark my-2 mx-auto`}
         onClick={handleExtraSpaces}
       >
         Remove Extra Spaces
       </button>
-      <button className={`btn btn-light btn-outline-dark my-2`} onClick={handleCopy}>
+      <button disabled={props.text.length===0} className={`btn btn-light btn-outline-dark my-2 mx-auto`} onClick={handleCopy}>
         Copy Text
       </button>
-      <button
-        className={`btn btn-light btn-outline-dark my-2 mx-2`}
+      <button disabled={props.text.length===0}
+        className={`btn btn-light btn-outline-dark my-2 mx-auto`}
         onClick={handleCtClick}
       >
         Clear Text
