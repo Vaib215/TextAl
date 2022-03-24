@@ -26,8 +26,7 @@ export default function Buttons(props) {
     props.setText(cam);
   };
   const handleCopy = () => {
-    let text = document.querySelector('textarea');
-    navigator.clipboard.writeText(text.value);
+    navigator.clipboard.writeText(text);
     props.sendPrompt('Text copied to your clipboard');
   };
   const handleExtraSpaces = () => {
